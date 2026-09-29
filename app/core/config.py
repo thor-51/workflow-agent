@@ -20,6 +20,7 @@ class Settings(BaseSettings):
     app_env: Literal["development", "test", "production"] = "development"
     log_level: Literal["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"] = "INFO"
     log_format: Literal["json", "console"] = "json"
+    database_url: str = "sqlite:///./workflow_agent.db"
 
 
 @lru_cache
